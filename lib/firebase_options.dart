@@ -44,40 +44,40 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyC1XJjbHvkCUM5g9ydWQYsFiHLg0rqQbas',
-    appId: '1:794573244493:web:eb67beb6dc659ebe22f404',
-    messagingSenderId: '794573244493',
-    projectId: 'codeofland-web',
-    authDomain: 'codeofland-web.firebaseapp.com',
-    storageBucket: 'codeofland-web.appspot.com',
-    measurementId: 'G-7DQNZ2S05M',
+    apiKey: 'AIzaSyCuzB390YVJNZ_W7dw6t86Nacda1bu4Ls4',
+    appId: '1:883814116942:web:39b1d7f30fffc511641d1f',
+    messagingSenderId: '883814116942',
+    projectId: 'code-of-land',
+    authDomain: 'code-of-land.firebaseapp.com',
+    storageBucket: 'code-of-land.appspot.com',
+    measurementId: 'G-S0YE5VR8D7',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDU98Y8HCEqs5VMGDiF6YXRLOX7XDfo4Pw',
-    appId: '1:794573244493:android:ea1b22a2924089c122f404',
-    messagingSenderId: '794573244493',
-    projectId: 'codeofland-web',
-    storageBucket: 'codeofland-web.appspot.com',
+    apiKey: 'AIzaSyDyHE1MOB_xdzRqXmJu8uUiVLtzBXuxFxI',
+    appId: '1:883814116942:android:645170ac7ef5e465641d1f',
+    messagingSenderId: '883814116942',
+    projectId: 'code-of-land',
+    storageBucket: 'code-of-land.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyAq82sBmxtdPbLCUVHYOD5jRJqr_5AdzEc',
-    appId: '1:794573244493:ios:920393b871fdb1d422f404',
-    messagingSenderId: '794573244493',
-    projectId: 'codeofland-web',
-    storageBucket: 'codeofland-web.appspot.com',
-    iosClientId: '794573244493-n14orgoml6msgac4g83bre7hkpeelfvm.apps.googleusercontent.com',
+    apiKey: 'AIzaSyDOePgugqDBpo41g6z68pvW1CB15J3LXT8',
+    appId: '1:883814116942:ios:8a87f7fc907a0f22641d1f',
+    messagingSenderId: '883814116942',
+    projectId: 'code-of-land',
+    storageBucket: 'code-of-land.appspot.com',
+    iosClientId: '883814116942-erh4q8bsm50fnia2nd0nkdsv22bp1gke.apps.googleusercontent.com',
     iosBundleId: 'com.example.codeOfLand',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyAq82sBmxtdPbLCUVHYOD5jRJqr_5AdzEc',
-    appId: '1:794573244493:ios:920393b871fdb1d422f404',
-    messagingSenderId: '794573244493',
-    projectId: 'codeofland-web',
-    storageBucket: 'codeofland-web.appspot.com',
-    iosClientId: '794573244493-n14orgoml6msgac4g83bre7hkpeelfvm.apps.googleusercontent.com',
+    apiKey: 'AIzaSyDOePgugqDBpo41g6z68pvW1CB15J3LXT8',
+    appId: '1:883814116942:ios:8a87f7fc907a0f22641d1f',
+    messagingSenderId: '883814116942',
+    projectId: 'code-of-land',
+    storageBucket: 'code-of-land.appspot.com',
+    iosClientId: '883814116942-erh4q8bsm50fnia2nd0nkdsv22bp1gke.apps.googleusercontent.com',
     iosBundleId: 'com.example.codeOfLand',
   );
 }

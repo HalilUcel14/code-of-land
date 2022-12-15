@@ -1,3 +1,4 @@
+import 'package:code_of_land/core/theme/custom_text_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:hucel_core/hucel_core.dart';
 
@@ -11,5 +12,7 @@ class ThemeDark implements IApplicationTheme {
   ThemeDark._init();
 
   @override
-  ThemeData? theme = ThemeData.dark().copyWith();
+  ThemeData? theme = ThemeData.dark().copyWith(
+    textTheme: CustomTextTheme.instance.textTheme,
+  );
 }
