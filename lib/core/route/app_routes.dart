@@ -1,5 +1,6 @@
 import 'package:code_of_land/screen/authentication/login/login_screen.dart';
 import 'package:code_of_land/screen/authentication/splash/splash_screen.dart';
+import 'package:code_of_land/screen/main_screen.dart/main_screen.dart';
 import 'package:flutter/material.dart';
 
 abstract class IAppRoutes {
@@ -20,11 +21,13 @@ class AppRoutes implements IAppRoutes {
   static const String home = '/home';
   static const String login = '/login';
   static const String onBoard = '/onBoard';
+  static const String main = '/main';
 
   @override
   Map<String, Widget Function(BuildContext)> routes = <String, WidgetBuilder>{
     initRoute: (context) => const Scaffold(),
     splash: (context) => const SplashScreen(),
     login: (context) => const LoginScreen(),
+    main: (context) => const MainScreen(),
   };
 }

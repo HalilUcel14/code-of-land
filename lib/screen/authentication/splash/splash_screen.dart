@@ -22,7 +22,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   void navigateOtherPage() async {
     await Navigator.pushNamedAndRemoveUntil(
-        context, AppRoutes.login, (route) => false);
+        context, AppRoutes.main, (route) => false);
   }
 
   ///
