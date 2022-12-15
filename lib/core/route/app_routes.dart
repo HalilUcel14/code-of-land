@@ -1,3 +1,4 @@
+import 'package:code_of_land/screen/authentication/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 abstract class IAppRoutes {
@@ -21,5 +22,6 @@ class AppRoutes implements IAppRoutes {
   @override
   Map<String, Widget Function(BuildContext)> routes = <String, WidgetBuilder>{
     initRoute: (context) => const Scaffold(),
+    splash: (context) => const SplashScreen(),
   };
 }

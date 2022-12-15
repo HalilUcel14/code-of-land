@@ -84,7 +84,7 @@ class MyApp extends StatelessWidget {
             ],
           )),
       //
-      initialRoute: AppRoutes.initRoute,
+      initialRoute: AppRoutes.splash,
       routes: AppRoutes.instance.routes,
     );
   }
