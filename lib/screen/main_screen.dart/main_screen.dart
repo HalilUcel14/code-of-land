@@ -1,8 +1,10 @@
-import 'package:code_of_land/core/constants/color_constant.dart';
-import 'package:code_of_land/core/constants/number_constant.dart';
-import 'package:code_of_land/screen/page/home/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:hucel_core/hucel_core.dart';
+
+import '../../core/constants/color_constant.dart';
+import '../../core/constants/localization_constant.dart';
+import '../../core/constants/number_constant.dart';
+import '../page/home/home_screen.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
@@ -59,9 +61,54 @@ class CustomAppBar extends StatelessWidget {
     return Row(
       children: [
         Text(
-          'Code Of Land',
+          LocalizationConst().applicationTitle,
           style: TextStyle(color: Colors.amber[700], fontSize: context.heightS),
         ),
+        const Spacer(),
+        Expanded(
+          child: ListView.builder(
+            scrollDirection: Axis.horizontal,
+            itemCount: LocalizationConst().mainAppBarItemList.length,
+            itemBuilder: (context, index) => Center(
+              child: GestureDetector(
+                onTap: () {},
+                child: Container(
+                  margin: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    color: Colors.orangeAccent,
+                  ),
+                  child: Text(
+                    LocalizationConst().mainAppBarItemList[index],
+                    style: const TextStyle(),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
+        const SizedBox(width: 24),
+        Container(
+          padding: context.padAllXS,
+          decoration: BoxDecoration(
+              color: Colors.yellowAccent,
+              borderRadius: BorderRadius.circular(36),
+              boxShadow: [
+                BoxShadow(
+                  blurRadius: 16,
+                  blurStyle: BlurStyle.outer,
+                  color: ColorConst.black54,
+                )
+              ]),
+          child: Row(
+            children: [
+              IconButton(onPressed: () {}, icon: const Icon(Icons.sunny)),
+              const SizedBox(width: 16),
+              IconButton(onPressed: () {}, icon: const Icon(Icons.language)),
+            ],
+          ),
+        )
       ],
     );
   }
