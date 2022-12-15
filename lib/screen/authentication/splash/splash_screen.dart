@@ -8,8 +8,11 @@ class SplashScreen extends StatelessWidget {
     return Center(
       child: Column(
         children: const [
-          FlutterLogo(),
+          FlutterLogo(
+            size: 48,
+          ),
           Text('Splash Screen '),
+          Text('Test')
         ],
       ),
     );
