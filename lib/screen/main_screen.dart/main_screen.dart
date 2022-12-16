@@ -26,6 +26,22 @@ class MainScreen extends StatelessWidget {
   }
 }
 
+class ScreenSizeWidget extends StatelessWidget {
+  const ScreenSizeWidget(
+      {super.key,
+      this.size = 800,
+      required this.smallChild,
+      required this.largeChild});
+  final double size;
+  final Widget smallChild;
+  final Widget largeChild;
+  //
+  @override
+  Widget build(BuildContext context) {
+    return context.width > size ? largeChild : smallChild;
+  }
+}
+
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key});
 
@@ -93,7 +109,7 @@ class CustomAppBar extends StatelessWidget {
           padding: context.padAllXS,
           decoration: BoxDecoration(
               color: Colors.yellowAccent,
-              borderRadius: BorderRadius.circular(36),
+              borderRadius: BorderRadius.circular(24),
               boxShadow: [
                 BoxShadow(
                   blurRadius: 16,
