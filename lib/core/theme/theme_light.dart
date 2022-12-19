@@ -13,6 +13,7 @@ class ThemeLight implements IApplicationTheme {
 
   @override
   ThemeData? theme = ThemeData.light().copyWith(
-    textTheme: CustomTextTheme.instance.textTheme,
+    textTheme: CustomTextTheme.instance.normalTheme,
+    primaryTextTheme: CustomTextTheme.instance.primaryTheme,
   );
 }

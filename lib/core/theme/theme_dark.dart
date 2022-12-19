@@ -13,6 +13,7 @@ class ThemeDark implements IApplicationTheme {
 
   @override
   ThemeData? theme = ThemeData.dark().copyWith(
-    textTheme: CustomTextTheme.instance.textTheme,
+    textTheme: CustomTextTheme.instance.normalTheme,
+    primaryTextTheme: CustomTextTheme.instance.primaryTheme,
   );
 }
