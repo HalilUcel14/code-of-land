@@ -4,15 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:hucel_core/hucel_core.dart';
 import 'package:provider/provider.dart';
 
-class DrawerProvider extends ChangeNotifier {
-  bool _isOpenClose = true;
-  bool get isOpenClose => _isOpenClose;
-
-  void changeIsOpenClose() {
-    _isOpenClose = !_isOpenClose;
-    notifyListeners();
-  }
-}
+import 'drawer_field_provider.dart';
 
 class MainDrawerField extends StatefulWidget {
   const MainDrawerField({super.key});
