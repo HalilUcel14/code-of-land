@@ -46,7 +46,12 @@ dependencies:
   ##
   ## My Packages For Utils
   hucel_core: ^0.3.4
+  #
+  ### Style Management
   google_fonts: ^3.0.1
+  #
+  ### State Management
+  provider: ^6.0.5
 
 dev_dependencies:
   flutter_test:
