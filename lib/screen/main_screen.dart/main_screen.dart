@@ -31,6 +31,10 @@ class MainScreenLargeChild extends StatelessWidget {
           color: Colors.red,
           height: context.height,
         ),
+        Expanded(
+            child: Container(
+          color: Colors.blue,
+        ))
       ],
     );
   }

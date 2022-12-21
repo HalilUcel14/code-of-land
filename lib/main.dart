@@ -1,6 +1,7 @@
 import 'package:code_of_land/core/theme/theme_dark.dart';
 import 'package:code_of_land/core/theme/theme_light.dart';
 import 'package:code_of_land/firebase_options.dart';
+import 'package:code_of_land/screen/main_screen.dart/components/drawer_field_provider.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -53,9 +54,8 @@ EasyLocalization _easyLocalization() => EasyLocalization(
 
 MultiProvider _multiProvider() => MultiProvider(
       providers: [
-        ChangeNotifierProvider(
-          create: (_) => ThemeManager.instance,
-        )
+        ChangeNotifierProvider(create: (_) => ThemeManager.instance),
+        ChangeNotifierProvider(create: (_) => DrawerAnimationProvider.instance),
       ],
       child: const MyApp(),
     );
