@@ -6,8 +6,6 @@ class ForgotScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: CenterContainer(child: Text("Hello Github")),
-    );
+    return CenterContainer(child: const Text("Hello Github"));
   }
 }

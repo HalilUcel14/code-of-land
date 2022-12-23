@@ -1,5 +1,5 @@
 import 'package:code_of_land/core/widget/screen_size_widget.dart';
-import 'package:code_of_land/screen/main_screen.dart/components/drawer_field.dart';
+import 'package:code_of_land/screen/main_screen.dart/drawer/drawer_field.dart';
 import 'package:flutter/material.dart';
 import 'package:hucel_core/hucel_core.dart';
 
