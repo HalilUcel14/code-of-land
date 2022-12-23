@@ -34,7 +34,7 @@ class _CollapsingListTileState extends State<CollapsingListTile> {
   Widget build(BuildContext context) {
     return Container(
       width: _widthAnimation.value,
-      margin: context.padAllXS,
+      margin: context.padAllS,
       child: Row(
         children: [
           Icon(
@@ -45,7 +45,7 @@ class _CollapsingListTileState extends State<CollapsingListTile> {
           _widthAnimation.value > NumericConst().maxDrawerWidth * 0.8
               ? Column(
                   children: [
-                    SizedBox(width: NumericConst().defaultSizedHeight / 2),
+                    const SizedBox(width: 100),
                     Text(
                       widget.title,
                       style: TextStyleTheme.instance.listTitleDefaultTextStyle,
@@ -72,4 +72,5 @@ List<NavigationModel> navigationItems = [
   NavigationModel(icon: Icons.search, title: 'Search'),
   NavigationModel(icon: Icons.notifications, title: 'Notification'),
   NavigationModel(icon: Icons.settings, title: 'Settings'),
+  NavigationModel(icon: Icons.logout, title: 'Log Out'),
 ];

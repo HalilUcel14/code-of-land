@@ -76,6 +76,7 @@ class _MainDrawerFieldState extends State<MainDrawerField>
   SizedBox _drawerList(BuildContext context) {
     return SizedBox(
       height: context.height * 0.4,
+      width: double.infinity,
       child: ListView.builder(
         itemCount: navigationItems.length,
         itemBuilder: (context, index) {
@@ -110,17 +111,11 @@ class _MainDrawerFieldState extends State<MainDrawerField>
                 children: [
                   Text(
                     "Roger Hoffman",
-                    style: Theme.of(context)
-                        .textTheme
-                        .headline6!
-                        .copyWith(color: Colors.white),
+                    style: context.headline6!.copyWith(color: Colors.white),
                   ),
                   Text(
                     'San Francisco, CA',
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodyText1!
-                        .copyWith(color: Colors.grey),
+                    style: context.bodyText1!.copyWith(color: Colors.grey),
                   ),
                 ],
               )
