@@ -9,10 +9,12 @@ class CollapsingListTile extends StatefulWidget {
       {super.key,
       required this.title,
       required this.icon,
-      required this.animationController});
+      required this.animationController,
+      this.onTap});
 
   final String title;
   final IconData icon;
+  final void Function()? onTap;
   final AnimationController animationController;
 
   @override
@@ -32,9 +34,10 @@ class _CollapsingListTileState extends State<CollapsingListTile> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return ClickableContainer(
+      onTap: widget.onTap,
       width: _widthAnimation.value,
-      margin: context.padAllS,
+      margin: context.padVerticalS + context.padHorizontalXS,
       child: Row(
         children: [
           Icon(
@@ -43,14 +46,9 @@ class _CollapsingListTileState extends State<CollapsingListTile> {
             size: NumericConst().defaultIconSize,
           ),
           _widthAnimation.value > NumericConst().maxDrawerWidth * 0.8
-              ? Column(
-                  children: [
-                    const SizedBox(width: 100),
-                    Text(
-                      widget.title,
-                      style: TextStyleTheme.instance.listTitleDefaultTextStyle,
-                    ),
-                  ],
+              ? Text(
+                  widget.title,
+                  style: TextStyleTheme.instance.listTitleDefaultTextStyle,
                 )
               : const SizedBox.shrink(),
         ],

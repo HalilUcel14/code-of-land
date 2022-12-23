@@ -119,7 +119,7 @@ class _MainDrawerFieldState extends State<MainDrawerField>
                   ),
                 ],
               )
-            : const SizedBox.shrink(),
+            : const SizedBox(),
       ],
     );
   }
