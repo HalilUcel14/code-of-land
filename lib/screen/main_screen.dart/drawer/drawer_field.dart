@@ -41,12 +41,22 @@ class _MainDrawerFieldState extends State<MainDrawerField>
         width: widthSizeAnimation.value,
         color: ColorsTheme.instance.drawerBackgroundColor,
         child: ColumnWithSpacing(
-          spacing: context.heightM,
+          spacing: 0,
           children: [
-            _drawerProfile(context),
-            _drawerList(context),
-            const Spacer(),
-            _drawerAnimateButton(context),
+            // Flex 3
+            Expanded(
+              flex: 3,
+              child: Column(
+                children: [
+                  SizedBox(height: context.heightM),
+                  _drawerProfile(context),
+                ],
+              ),
+            ),
+            // Flex 6
+            Expanded(flex: 6, child: _drawerList(context)),
+            // Flex 1
+            Expanded(child: _drawerAnimateButton(context))
           ],
         ),
       ),
