@@ -41,18 +41,16 @@ class _MainDrawerFieldState extends State<MainDrawerField>
         width: widthSizeAnimation.value,
         color: ColorsTheme.instance.drawerBackgroundColor,
         child: ColumnWithSpacing(
-          spacing: 0,
           children: [
             // Flex 3
             Expanded(
-              flex: 3,
-              child: Column(
-                children: [
-                  SizedBox(height: context.heightM),
-                  _drawerProfile(context),
-                ],
-              ),
-            ),
+                flex: 3,
+                child: Column(
+                  children: [
+                    SizedBox(height: context.heightM),
+                    _drawerProfile(context),
+                  ],
+                )),
             // Flex 6
             Expanded(flex: 6, child: _drawerList(context)),
             // Flex 1
@@ -63,6 +61,7 @@ class _MainDrawerFieldState extends State<MainDrawerField>
     );
   }
 
+  // Drawer alanının açılıp kapanması için kullanılan buton
   IconButton _drawerAnimateButton(BuildContext context) {
     return IconButton(
       padding: EdgeInsets.only(right: NumericConst().defaultPadding),
@@ -83,23 +82,21 @@ class _MainDrawerFieldState extends State<MainDrawerField>
     );
   }
 
-  SizedBox _drawerList(BuildContext context) {
-    return SizedBox(
-      height: context.height * 0.4,
-      width: double.infinity,
-      child: ListView.builder(
-        itemCount: navigationItems.length,
-        itemBuilder: (context, index) {
-          return CollapsingListTile(
-            title: navigationItems[index].title,
-            icon: navigationItems[index].icon,
-            animationController: _animationController,
-          );
-        },
-      ),
+  // Drawer içerisindeki menu buton listesi
+  Widget _drawerList(BuildContext context) {
+    return ListView.builder(
+      itemCount: navigationItems.length,
+      itemBuilder: (context, index) {
+        return CollapsingListTile(
+          title: navigationItems[index].title,
+          icon: navigationItems[index].icon,
+          animationController: _animationController,
+        );
+      },
     );
   }
 
+  // Profile Fotograf için kullanılan yer
   Column _drawerProfile(BuildContext context) {
     return Column(
       children: [
