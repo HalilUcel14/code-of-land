@@ -26,12 +26,23 @@ class HomeScreen extends StatelessWidget {
   }
 
   Widget _welcomePage(context) {
-    return MultiBuilder(builder:
-        (context, deviceHeight, deviceWidth, boxConstraints, orientation) {
-      return Container(
-        height:
-            boxConstraints.maxWidth > 800 ? boxConstraints.maxWidth * 0.6 : 480,
-        color: Colors.red,
+    return MultiBuilder(
+        builder: (context, height, width, constrain, orientation) {
+      return SizedBox(
+        height: constrain.maxWidth > 800 ? constrain.maxWidth * 0.6 : 480,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Expanded(
+                child: Image(
+                    image: NetworkImage('https://picsum.photos/600/360'))),
+            Text(
+              'Hello, Welcome to my site, I will help you for better than development on flutter dart languages.',
+              style: context.headline5,
+              textAlign: TextAlign.center,
+            )
+          ],
+        ),
       );
     });
   }
