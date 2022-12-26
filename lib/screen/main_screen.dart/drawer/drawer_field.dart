@@ -54,7 +54,9 @@ class _MainDrawerFieldState extends State<MainDrawerField>
             // Flex 6
             Expanded(flex: 6, child: _drawerList(context)),
             // Flex 1
-            Expanded(child: _drawerAnimateButton(context))
+            context.width < NumericConst().smallScreenSize
+                ? const SizedBox.shrink()
+                : Expanded(child: _drawerAnimateButton(context))
           ],
         ),
       ),
