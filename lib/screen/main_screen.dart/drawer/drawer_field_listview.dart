@@ -2,7 +2,7 @@ import 'package:code_of_land/core/constants/numeric_constant.dart';
 import 'package:flutter/material.dart';
 import 'package:hucel_core/hucel_core.dart';
 
-import '../../../core/theme/textstyle_theme.dart';
+import '../../../core/theme/theme_helper/textstyle_theme.dart';
 
 class CollapsingListTile extends StatefulWidget {
   const CollapsingListTile(

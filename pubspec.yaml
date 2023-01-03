@@ -40,6 +40,7 @@ dependencies:
   ## This Packages Can I Use Firebase 
   firebase_core: ^2.4.0
   firebase_auth: ^4.2.0
+  firebase_storage: ^11.0.10
   ##
   ## Change Multiple Language
   easy_localization: ^3.0.1
@@ -52,6 +53,10 @@ dependencies:
   #
   ### State Management
   provider: ^6.0.5
+  #
+  ### File Management For path
+  path_provider: ^2.0.11
+  
 
 dev_dependencies:
   flutter_test:

@@ -1,5 +1,5 @@
 import 'package:code_of_land/core/constants/numeric_constant.dart';
-import 'package:code_of_land/core/theme/color_theme.dart';
+import 'package:code_of_land/core/theme/theme_helper/color_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:hucel_core/hucel_core.dart';
 import 'package:provider/provider.dart';
