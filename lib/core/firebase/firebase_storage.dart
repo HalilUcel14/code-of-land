@@ -44,14 +44,17 @@ class FirebaseStorageManager {
 
   // ------------------- Upload From a String --------------------
 
-  String dataUrl = "data:text/plain;base64,SGVsbG8IFdvcmxkIQ==";
+  //
+  //
 
-  try {
-    await mountainsRef.putString(dataUrl,format: PutStringFormat.dataUrl);
+  // String dataUrl = "data:text/plain;base64,SGVsbG8IFdvcmxkIQ==";
 
-  } on FirebaseException catch (e){
-    
-  }
+  // try {
+  //   await mountainsRef.putString(dataUrl,format: PutStringFormat.dataUrl);
+
+  // } on FirebaseException catch (e){
+
+  // }
 
   //https://firebase.flutter.dev/docs/storage/upload-files
 
